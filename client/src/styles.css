@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff9db; /* Yellowish background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.calendar-container {
+  background-color: #ffffff; /* White to contrast with yellowish body */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff; /* White for modal */
+  padding: 25px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  max-height: 90vh; /* Limit height to 90% of viewport */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px; /* Ensure spacing above buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.cancel {
+  background-color: #6b7280;
+  color: white;
+}
+
+button.cancel:hover {
+  background-color: #4b5563;
+}
+
+button.save {
+  background-color: #3b82f6;
+  color: white;
+}
+
+button.save:hover {
+  background-color: #2563eb;
+}
+
+button.delete {
+  background-color: #ef4444;
+  color: white;
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+}
+
+button.delete:hover {
+  background-color: #dc2626;
+}
+
+.fc {
+  max-width: 100%;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #1f2937;
+}
+
+.fc .fc-day-today {
+  background-color: #bfdbfe !important;
+}
+
+.event-content {
+  padding: 5px;
+  font-size: 0.9em;
+}
+
+.event-content b {
+  color: #1f2937;
+}
+
+.event-content p {
+  margin: 2px 0 0;
+  color: #4b5563;
+  font-size: 0.85em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+    max-height: 85vh; /* Slightly smaller for mobile */
+  }
+
+  .search-bar input {
+    max-width: 100%;
+  }
+
+  .fc {
+    font-size: 0.85em;
+  }
+
+  .fc .fc-button {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+}
